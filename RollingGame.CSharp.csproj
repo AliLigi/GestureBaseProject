@@ -78,8 +78,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Myo Samples\Scripts\CameraController.cs" />
+    <Compile Include="Assets\Myo Samples\Scripts\CameraScript.cs" />
     <Compile Include="Assets\Myo Samples\Scripts\ColorBoxByPose.cs" />
     <Compile Include="Assets\Myo Samples\Scripts\JointOrientation.cs" />
+    <Compile Include="Assets\Myo Samples\Scripts\PlayerComponent.cs" />
+    <Compile Include="Assets\Myo Samples\Scripts\Rotator.cs" />
     <Compile Include="Assets\Myo Samples\Scripts\SampleSceneGUI.cs" />
     <Compile Include="Assets\Myo\Scripts\Myo.NET\EventTypes.cs" />
     <Compile Include="Assets\Myo\Scripts\Myo.NET\Hub.cs" />
@@ -91,9 +95,6 @@
     <Compile Include="Assets\Myo\Scripts\Myo.NET\libmyo.cs" />
     <Compile Include="Assets\Myo\Scripts\ThalmicHub.cs" />
     <Compile Include="Assets\Myo\Scripts\ThalmicMyo.cs" />
-    <Compile Include="Assets\_Scripts\CameraController.cs" />
-    <Compile Include="Assets\_Scripts\PlayerComponent.cs" />
-    <Compile Include="Assets\_Scripts\Rotator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Myo\README-MyoUnity.txt" />

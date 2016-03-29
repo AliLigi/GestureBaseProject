@@ -68,6 +68,7 @@ public class ThalmicMyo : MonoBehaviour {
     }
 
     void Update() {
+        ballLocation();
         lock (_lock) {
             armSynced = _myoArmSynced;
             arm = _myoArm;
@@ -163,6 +164,17 @@ public class ThalmicMyo : MonoBehaviour {
                 value.Locked += myo_OnLock;
             }
         }
+    }
+
+    void ballLocation()
+    {
+        transform.localRotation = new Quaternion(_myoQuaternion.Y, _myoQuaternion.Z, -_myoQuaternion.X, -_myoQuaternion.W);
+        accelerometer = new Vector3(_myoAccelerometer.Y, _myoAccelerometer.Z, -_myoAccelerometer.X);
+        Vector3 eulerAngles = transform.localRotation.eulerAngles;
+
+        Debug.Log("Y:" + eulerAngles.y+ "X:" + eulerAngles.x +"Z:" + eulerAngles.z);
+        
+
     }
 
     private Object _lock = new Object();

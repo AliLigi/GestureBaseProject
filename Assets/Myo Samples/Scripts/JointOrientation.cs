@@ -16,6 +16,8 @@ public class JointOrientation : MonoBehaviour
     // This object must have a ThalmicMyo script attached.
     public GameObject myo = null;
 
+    public float speed;
+    private Rigidbody rb;
     // A rotation that compensates for the Myo armband's orientation parallel to the ground, i.e. yaw.
     // Once set, the direction the Myo armband is facing becomes "forward" within the program.
     // Set by making the fingers spread pose or pressing "r".
@@ -60,6 +62,7 @@ public class JointOrientation : MonoBehaviour
                 new Vector3 (myo.transform.forward.x, 0, myo.transform.forward.z),
                 new Vector3 (0, 0, 1)
             );
+            
 
             // _referenceRoll represents how many degrees the Myo armband is rotated clockwise
             // about its forward axis (when looking down the wearer's arm towards their hand) from the reference zero
@@ -73,7 +76,7 @@ public class JointOrientation : MonoBehaviour
         // Current zero roll vector and roll value.
         Vector3 zeroRoll = computeZeroRollVector (myo.transform.forward);
         float roll = rollFromZero (zeroRoll, myo.transform.forward, myo.transform.up);
-
+        //float ballRoll = rollFromZero(zeroRoll, myo.transform.rotation, myo.active) ;
         // The relative roll is simply how much the current roll has changed relative to the reference roll.
         // adjustAngle simply keeps the resultant value within -180 to 180 degrees.
         float relativeRoll = normalizeAngle (roll - _referenceRoll);
