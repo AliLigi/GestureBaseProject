@@ -9,11 +9,13 @@ public class PlayerComponent : MonoBehaviour
     public Text winText;
 
     private Rigidbody rb;
+    //private Rigidbody rigib;
     private int count;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+  
         count = 0;
         SetCountText();
         winText.text = "";
@@ -27,7 +29,9 @@ public class PlayerComponent : MonoBehaviour
 
         rb.AddForce(movement * speed);
 
+
     }
+   
 
     void OnTriggerEnter(Collider other)
     {
@@ -43,7 +47,7 @@ public class PlayerComponent : MonoBehaviour
     void SetCountText()
     {
         countText.text = "Count: " + count.ToString();
-        if (count >= 55)
+        if (count >= 110)
         {
             winText.text = "You Win!!!!";
         }
