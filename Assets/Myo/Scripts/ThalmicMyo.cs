@@ -68,7 +68,7 @@ public class ThalmicMyo : MonoBehaviour {
     }
 
     void Update() {
-        ballLocation();
+       // ballLocation();
         lock (_lock) {
             armSynced = _myoArmSynced;
             arm = _myoArm;
@@ -166,7 +166,8 @@ public class ThalmicMyo : MonoBehaviour {
         }
     }
 
-    void ballLocation()
+  //was trying to add the location the x, y, z, access and then map it to the ball object but that didnt work so i commentd it out
+  /*  void ballLocation()
     {
         transform.localRotation = new Quaternion(_myoQuaternion.Y, _myoQuaternion.Z, -_myoQuaternion.X, -_myoQuaternion.W);
         accelerometer = new Vector3(_myoAccelerometer.Y, _myoAccelerometer.Z, -_myoAccelerometer.X);
@@ -174,8 +175,8 @@ public class ThalmicMyo : MonoBehaviour {
 
         Debug.Log("Y:" + eulerAngles.y+ "X:" + eulerAngles.x +"Z:" + eulerAngles.z);
         
-
-    }
+    */
+   // }
 
     private Object _lock = new Object();
 
