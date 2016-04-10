@@ -31,18 +31,37 @@ public class PlayerComponent : MonoBehaviour
 
 
     }
-   
+    //trying to make the walls colide with the ball
+    // void onCollisionEnter(Collider col)
+    //  {
+    //      if (col.gameObject.CompareTag("Wall"))
+    //      {
+    //          col.gameObject.SetActive(true);
+    //      }
+    //  }
 
     void OnTriggerEnter(Collider other)
     {
         //Destroy(other.gameObject);
-        if(other.gameObject.CompareTag("pickUp"))
+        if (other.gameObject.CompareTag("pickUp"))
         {
             other.gameObject.SetActive(false);
             count = count + 5;
             SetCountText();
         }
+
     }
+
+   /* void OnCollisionEnter(Collider col)
+    {
+        //Destroy(other.gameObject);
+        if(col.gameObject.CompareTag("wall"))
+        {
+            col.gameObject.SetActive(true);
+            
+        }*/
+    
+  //  }
 
     void SetCountText()
     {

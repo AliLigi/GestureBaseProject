@@ -83,6 +83,7 @@
     <Compile Include="Assets\Myo Samples\Scripts\ColorBoxByPose.cs" />
     <Compile Include="Assets\Myo Samples\Scripts\JoinMovement.cs" />
     <Compile Include="Assets\Myo Samples\Scripts\JointOrientation.cs" />
+    <Compile Include="Assets\Myo Samples\Scripts\NewBehaviourScript.cs" />
     <Compile Include="Assets\Myo Samples\Scripts\PlayerComponent.cs" />
     <Compile Include="Assets\Myo Samples\Scripts\Rotator.cs" />
     <Compile Include="Assets\Myo Samples\Scripts\SampleSceneGUI.cs" />
