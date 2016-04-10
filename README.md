@@ -21,7 +21,7 @@ This is a ball game connected to the MYO armband. The ball collects a series of 
 ####•	http://docs.unity3d.com/ScriptReference/Collider.html
 ####•	https://developer.thalmic.com/docs/api_reference/platform/the-sdk.html
 
-####The rest of the information is done in detail on the Documentation pdf. This documents shows how i went about creating this game for the MYO Armband, 
+####The rest of the information is done in detail on the Documentation docx. This documents shows how i went about creating this game for the MYO Armband, 
 it shows the challenges, the choices made and the changes i would of liked to add to this game. Also contains a series of images and screenshots of the project.
 
 
